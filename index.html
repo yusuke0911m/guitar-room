@@ -45,6 +45,7 @@
       font-weight: bold;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
       line-height: 1.2;
+      white-space: nowrap; /* スマホでも1行に収める */
     }
     header h1 span.online { display: block; color: #fff; }
     header h1 span.guitar-room { display: block; color: #ff99b6; }
@@ -123,7 +124,7 @@
     .sns {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-start; /* 左寄せ固定 */
       margin-top: 20px;
     }
     .sns .buttons {
@@ -131,7 +132,7 @@
       gap: 15px;
       margin-top: 10px;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: flex-start; /* 左寄せ固定 */
     }
     .sns .buttons a {
       padding: 12px 18px;
@@ -148,13 +149,13 @@
     .sns .buttons a:nth-child(3) { background:#1da1f2; }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 2.4em; }
+      header h1 { font-size: 1.8em; white-space: normal; } /* スマホで改行許可して収める */
       header p { font-size: 1.5em; }
       .cards { flex-direction: column; align-items: center; }
       .card { width: 90%; }
-      .card h3 { font-size: 1.6em; } /* スマホで見出しを大きく */
-      .sns { align-items: center; }
-      .sns .buttons { flex-wrap: wrap; gap: 10px; justify-content: center; }
+      .card h3 { font-size: 1.6em; }
+      .sns { align-items: flex-start; } /* 左寄せ維持 */
+      .sns .buttons { flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
     }
   </style>
 </head>
