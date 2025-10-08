@@ -10,48 +10,54 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+      background: linear-gradient(to bottom right, #f0f8ff, #fffacd);
       color: #333;
     }
+
     header {
       position: relative;
-      background: url('https://i.imgur.com/9YkOf1u.jpg') no-repeat center center;
+      background: url('https://i.imgur.com/9YkOf1u.jpg') no-repeat center top;
       background-size: contain;
-      color: #fff;
       text-align: center;
-      padding: 60px 20px;
-      min-height: 400px;
+      padding: 100px 20px;
+      min-height: 500px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+      color: #fff;
     }
     header::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.05);
+      background: linear-gradient(to bottom right, rgba(255,182,193,0.4), rgba(255,255,255,0.2));
       z-index: 0;
     }
     header h1, header p {
       position: relative;
       z-index: 1;
+      margin: 0;
     }
     header h1 {
-      margin: 0;
-      margin-top: 25px;
-      font-size: 2.4em;
-      color: #ffb6c1;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      line-height: 1.2;
+    }
+    header h1 span {
+      display: block; /* 2行に分ける */
     }
     header p {
-      font-size: 1.5em;
-      color: #ffe066;
+      font-size: 2em;
       font-weight: bold;
-      margin-top: 16px;
-      text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
+      color: #ffeb3b;
+      margin-top: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
     }
+
     section {
       padding: 20px;
       max-width: 800px;
@@ -60,11 +66,13 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #222;
       border-bottom: 2px solid #f39c12;
       padding-bottom: 5px;
     }
+
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -72,16 +80,21 @@
       justify-content: center;
     }
     .card {
-      background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 300px;
       text-align: center;
-    }
-    .card button {
-      background: #f39c12;
       color: #fff;
+    }
+    .card:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    .card:nth-child(2) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); color:#333; }
+    .card:nth-child(3) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+    .card:nth-child(4) { background: linear-gradient(135deg, #fddb92, #d1fdff); color:#333; }
+
+    .card button {
+      background: linear-gradient(135deg, #cce7ff, #ffd6f0); 
+      color: #333;
       padding: 10px 15px;
       border: none;
       border-radius: 6px;
@@ -91,41 +104,59 @@
       transition: 0.3s;
     }
     .card button:hover {
-      background: #d35400;
-    }
-    .sns a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #f39c12;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .sns a:hover {
-      color: #d35400;
-    }
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8em; }
-      header p { font-size: 1.2em; }
-      .cards { flex-direction: column; align-items: center; }
-      .card { width: 90%; }
+      background: linear-gradient(135deg, #a3d2ff, #ffb6e0);
     }
 
-    /* 講師写真を顔アップで円形に */
     .instructor img {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 15%;
       display: block;
       margin: 0 auto 15px auto;
+    }
+
+    .sns {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      margin-top: 20px;
+    }
+    .sns .buttons {
+      display: flex; 
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap; /* 幅に応じて折り返す */
+      justify-content: center;
+    }
+    .sns .buttons a {
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      min-width: 100px;
+      flex: 1 1 auto; /* 幅自動調整 */
+    }
+    .sns .buttons a:nth-child(1) { background:#ff0050; }
+    .sns .buttons a:nth-child(2) { background:#e1306c; }
+    .sns .buttons a:nth-child(3) { background:#1da1f2; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.4em; }
+      header p { font-size: 1.5em; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { width: 90%; }
+      .sns .buttons { flex-wrap: wrap; gap: 10px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>オンラインギター教室 guitar room</h1>
+  <h1><span>オンラインギター教室</span><span>guitar room</span></h1>
   <p>2026年1月開講<br>無料体験レッスン受付中</p>
 </header>
 
@@ -139,21 +170,22 @@
     <div class="card">
       <h3>体験レッスン</h3>
       <p>1回無料(30分)</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfuvgz5cBjJOQgdCNsJ91WYaj6Z0K8SB0QSwSVWi6sX5mqzdg/viewform?usp=header','_blank')">お申込み</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfuvgz5cBjJOQgdCNsJ91WYaj6Z0K8SB0QSwSVWi6sX5mqzdg/viewform?usp=header','_blank')">お申し込みはこちら</button>
     </div>
     <div class="card">
       <h3>通常レッスン①</h3>
       <p>30分コース 月4回 5,000円</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申込み</button>
+      <p>お月謝1ヵ月分<br>※学割・one room割・友達紹介制度あり</p>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申し込みはこちら</button>
     </div>
     <div class="card">
       <h3>通常レッスン②</h3>
       <p>60分コース 月4回 10,000円</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申込み</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申し込みはこちら</button>
     </div>
     <div class="card">
       <h3>入会金</h3>
-      <p>通常レッスン①のお月謝2ヵ月分 ※学割・one room割・友達紹介制度あり</p>
+      <p>通常レッスン①のお月謝1ヵ月分<br>※学割・one room割・友達紹介制度あり</p> 
     </div>
   </div>
   <p style="text-align:center; font-size:0.8em; margin-top:10px;">※価格はすべて税込みです</p>
@@ -173,9 +205,11 @@
 
 <section class="sns">
   <h2>SNS</h2>
-  <a href="https://www.tiktok.com/@yusuke0911_m" target="_blank">TikTok</a>
-  <a href="https://www.instagram.com/yusuke0911_m" target="_blank">Instagram</a>
-  <a href="https://twitter.com/guitarroom123" target="_blank">X</a>
+  <div class="buttons">
+    <a href="https://www.tiktok.com/@yusuke0911_m" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/yusuke0911_m" target="_blank">Instagram</a>
+    <a href="https://twitter.com/guitarroom123" target="_blank">X</a>
+  </div>
 </section>
 
 <section class="contact-info">
@@ -187,4 +221,5 @@
 
 </body>
 </html>
+
 
