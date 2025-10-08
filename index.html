@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>オンラインギター教室 guitar room</title>
+  <meta name="description" content="オンラインギター教室 guitar room。初心者から中級者向けのレッスン。無料体験レッスンあり。講師三浦裕介が丁寧に指導します。SNSで演奏動画も公開中。">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -12,7 +13,6 @@
       background: linear-gradient(to bottom, #f0f0f0, #ffffff);
       color: #333;
     }
-
     header {
       position: relative;
       background: url('https://i.imgur.com/9YkOf1u.jpg') no-repeat center center;
@@ -26,32 +26,25 @@
       justify-content: flex-start;
       align-items: center;
     }
-
     header::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background-color: rgba(0, 0, 0, 0.05);
       z-index: 0;
     }
-
-    header h1,
-    header p {
+    header h1, header p {
       position: relative;
       z-index: 1;
     }
-
     header h1 {
       margin: 0;
-      margin-top: 25px; 
+      margin-top: 25px;
       font-size: 2.4em;
       color: #ffb6c1;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
-
     header p {
       font-size: 1.5em;
       color: #ffe066;
@@ -59,7 +52,6 @@
       margin-top: 16px;
       text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
     }
-
     section {
       padding: 20px;
       max-width: 800px;
@@ -68,20 +60,17 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
     h2 {
       color: #222;
       border-bottom: 2px solid #f39c12;
       padding-bottom: 5px;
     }
-
     .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-
     .card {
       background: #fff;
       padding: 20px;
@@ -90,7 +79,6 @@
       width: 300px;
       text-align: center;
     }
-
     .card button {
       background: #f39c12;
       color: #fff;
@@ -102,11 +90,9 @@
       margin-top: 10px;
       transition: 0.3s;
     }
-
     .card button:hover {
       background: #d35400;
     }
-
     .sns a {
       margin-right: 15px;
       text-decoration: none;
@@ -114,11 +100,9 @@
       font-weight: bold;
       transition: 0.3s;
     }
-
     .sns a:hover {
       color: #d35400;
     }
-
     @media (max-width: 600px) {
       header h1 { font-size: 1.8em; }
       header p { font-size: 1.2em; }
@@ -126,13 +110,13 @@
       .card { width: 90%; }
     }
 
-    /* 講師写真を円形で顔アップ寄せ */
+    /* 講師写真を顔アップで円形に */
     .instructor img {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center 10%; /* 顔を上寄せ */
+      object-position: center 20%;
       display: block;
       margin: 0 auto 15px auto;
     }
@@ -149,23 +133,23 @@
   <h2>レッスン内容</h2>
   <p>初心者から中級者まで対応するオンラインギターレッスンです。<br>
   「独学で始めるのが不安」「何から練習すればよいかわからない」「コードチェンジやFコードが苦手」といった悩みを持つ方にぴったりです。<br>
-  自宅で学べる、他の音楽教室の半額以下の手頃な価格で、弾き語りやギターソロが弾けるようになることを目指します。楽器を持っていなくても参加可能です。あなたのはじめてのギターを選ぶお手伝いをさせてください。まずは無料体験レッスンでお気軽にお試しください。</p>
+  自宅で学べる手頃な価格で、弾き語りやギターソロが弾けるようになることを目指します。楽器を持っていなくても参加可能です。まずは無料体験レッスンでお気軽にお試しください。</p>
 
   <div class="cards">
     <div class="card">
       <h3>体験レッスン</h3>
       <p>1回無料(30分)</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfuvgz5cBjJOQgdCNsJ91WYaj6Z0K8SB0QSwSVWi6sX5mqzdg/viewform?usp=header', '_blank')">お申込み</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfuvgz5cBjJOQgdCNsJ91WYaj6Z0K8SB0QSwSVWi6sX5mqzdg/viewform?usp=header','_blank')">お申込み</button>
     </div>
     <div class="card">
       <h3>通常レッスン①</h3>
       <p>30分コース 月4回 5,000円</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog', '_blank')">お申込み</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申込み</button>
     </div>
     <div class="card">
       <h3>通常レッスン②</h3>
       <p>60分コース 月4回 10,000円</p>
-      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog', '_blank')">お申込み</button>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog','_blank')">お申込み</button>
     </div>
     <div class="card">
       <h3>入会金</h3>
@@ -179,9 +163,9 @@
   <h2>講師紹介</h2>
   <div style="display:flex; justify-content:center; margin-top:20px;">
     <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:350px; text-align:center;">
-      <img src="https://i.imgur.com/RoTUv2d.jpg" alt="講師 三浦 裕介">
+      <img src="https://i.imgur.com/RoTUv2d.jpg" alt="講師 三浦裕介">
       <h3>三浦 裕介</h3>
-      <p>幼少期からピアノを学び、18歳でギターを始めました。絶対音感を活かした正確な演奏や、軽音サークルでのバンド経験や指導の経験があります。塾講師としての指導経験もあり、現在は楽器店で音楽に関わる仕事をしています。講師演奏動画はSNSでご覧いただけます。</p>
+      <p>幼少期からピアノを学び、18歳でギターを始めました。絶対音感を活かした正確な演奏や、軽音サークルでのバンド経験や指導経験があります。塾講師としての指導経験もあり、現在は楽器店で音楽に関わる仕事をしています。SNSで講師演奏動画も公開中。</p>
       <p style="font-style:italic; color:#f39c12;">「ぜひあなたの大好きな曲をギターで弾いてみませんか？」</p>
     </div>
   </div>
