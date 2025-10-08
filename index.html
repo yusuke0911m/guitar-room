@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>オンラインギター教室 guitar room</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('https://i.imgur.com/9YkOf1u.jpg') no-repeat center center;
+      background-size: contain;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+    }
+
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      margin-top: 25px; 
+      font-size: 2.4em;
+      color: #ffb6c1;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    header p {
+      font-size: 1.5em;
+      color: #ffe066;
+      font-weight: bold;
+      margin-top: 16px;
+      text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.4);
+    }
+
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #222;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 5px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .card button {
+      background: #f39c12;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background: #d35400;
+    }
+
+    .sns a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #f39c12;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sns a:hover {
+      color: #d35400;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8em; }
+      header p { font-size: 1.2em; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { width: 90%; }
+    }
+
+    /* 講師写真をカード内で大きくズーム */
+    .instructor img {
+      width: 100%;
+      height: 150px;             /* カード高さはそのまま */
+      border-radius: 50%;
+      object-fit: cover;          /* 枠いっぱいにズーム */
+      object-position: center 20%; /* 上7割くらいを優先表示 */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>オンラインギター教室 guitar room</h1>
+  <p>2026年1月開講<br>無料体験レッスン受付中</p>
+</header>
+
+<section class="lesson">
+  <h2>レッスン内容</h2>
+  <p>初心者から中級者まで対応するオンラインギターレッスンです。<br>
+  「独学で始めるのが不安」「何から練習すればよいかわからない」「コードチェンジやFコードが苦手」といった悩みを持つ方にぴったりです。<br>
+  自宅で学べる、他の音楽教室の半額以下の手頃な価格で、弾き語りやギターソロが弾けるようになることを目指します。楽器を持っていなくても参加可能です。あなたのはじめてのギターを選ぶお手伝いをさせてください。まずは無料体験レッスンでお気軽にお試しください。</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>体験レッスン</h3>
+      <p>1回無料(30分)</p>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfuvgz5cBjJOQgdCNsJ91WYaj6Z0K8SB0QSwSVWi6sX5mqzdg/viewform?usp=header', '_blank')">お申込み</button>
+    </div>
+    <div class="card">
+      <h3>通常レッスン①</h3>
+      <p>30分コース 月4回 5,000円</p>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog', '_blank')">お申込み</button>
+    </div>
+    <div class="card">
+      <h3>通常レッスン②</h3>
+      <p>60分コース 月4回 10,000円</p>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkXmjAqka7JIf3aC-gJh-g8jS-qEWGXiB2yabSGHiPjj9QaA/viewform?usp=dialog', '_blank')">お申込み</button>
+    </div>
+    <div class="card">
+      <h3>入会金</h3>
+      <p>通常レッスン①のお月謝2ヵ月分 ※学割・one room割・友達紹介制度あり</p>
+    </div>
+  </div>
+  <p style="text-align:center; font-size:0.8em; margin-top:10px;">※価格はすべて税込みです</p>
+</section>
+
+<section class="instructor">
+  <h2>講師紹介</h2>
+  <div style="display:flex; justify-content:center; margin-top:20px;">
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:350px; text-align:center;">
+      <img src="https://i.imgur.com/RoTUv2d.jpg" alt="講師 三浦 裕介">
+      <h3>三浦 裕介</h3>
+      <p>幼少期からピアノを学び、18歳でギターを始めました。絶対音感を活かした正確な演奏や、軽音サークルでの後輩指導の経験があります。塾講師としての指導経験もあり、現在は楽器店で音楽に関わる仕事をしています。講師演奏動画はSNSでご覧いただけます。</p>
+      <p style="font-style:italic; color:#f39c12;">「ぜひあなたの大好きな曲をギターで弾いてみませんか？」</p>
+    </div>
+  </div>
+</section>
+
+<section class="sns">
+  <h2>SNS</h2>
+  <a href="https://www.tiktok.com/@yusuke0911_m" target="_blank">TikTok</a>
+  <a href="https://www.instagram.com/yusuke0911_m" target="_blank">Instagram</a>
+  <a href="https://twitter.com/guitarroom123" target="_blank">X</a>
+</section>
+
+<section class="contact-info">
+  <h2>お問い合わせ</h2>
+  <p>電話番号：<a href="tel:08030043755">080-3004-3755</a></p>
+  <p>メールアドレス：<a href="mailto:yusuke3755.m@icloud.com">yusuke3755.m@icloud.com</a></p>
+  <p>各種SNSのDMでも受け付けております。</p>
+</section>
+
+</body>
+</html>
