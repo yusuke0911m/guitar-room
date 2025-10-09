@@ -101,6 +101,9 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
 }
 .card button:hover { background: linear-gradient(135deg, #ff6b9c, #ff99b6); }
 
+.instructor {
+  text-align: center;
+}
 .instructor img {
   width: 260px;
   height: 260px;
@@ -134,7 +137,7 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  text-align: center; /* 左揃えはしない */
+  text-align: center;
   min-width: 100px;
   flex: 1 1 auto;
 }
@@ -169,12 +172,13 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
   padding: 20px;
   max-width: 800px;
   margin: 20px auto;
-  background: #fff;
+  background: #fff0f5;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
-.contact-info a { color: #ff0050; text-decoration: underline; }
+.contact-info a { color: #1a0dab; text-decoration: underline; }
 
 @media (max-width: 600px) {
   header h1 { font-size: 1.9em; }
@@ -182,8 +186,8 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
   .cards { flex-direction: column; align-items: center; }
   .card { width: 90%; }
   .card h3 { font-size: 1.6em; }
-  .sns { align-items: center; }
-  .sns .buttons { flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .sns { align-items: flex-start; }
+  .sns .buttons { flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
 }
 </style>
 </head>
@@ -227,7 +231,42 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
 <section class="qa">
   <h2>Q&A</h2>
   <div class="accordion">
-    <!-- Q&A 同じ内容省略 -->
+    <div class="accordion-item">
+      <button>Q1. 当日には何が必要ですか？</button>
+      <div class="panel">A. ご自宅で楽器とZoomが使える端末をご用意ください。もう一台端末があると、コードや歌詞を調べたりメモしたりするのに便利です。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q2. レッスンの形式について詳しく教えてください。</button>
+      <div class="panel">A. 「guitar room」はZoomを使ったオンラインレッスンです。月4回、決まった曜日・時間帯で行います。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q3. まだギターを持っていなくても参加できますか？</button>
+      <div class="panel">A. はい、参加可能です。生徒様のご要望に合わせて最適なギターをご提案いたします。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q4. 初心者でも大丈夫ですか？</button>
+      <div class="panel">A. もちろんです。チューニングの仕方やコードの名前、基礎練習から丁寧に指導いたします。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q5. 弾き語りをできるようになりたいのですが、どんな曲でも大丈夫ですか？</button>
+      <div class="panel">A. はい、自分が弾きたい曲でレッスン可能です。ご希望があれば歌唱指導も行います。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q6. ギターソロを弾きたいのですが、教えてもらえますか？</button>
+      <div class="panel">A. もちろんです。原曲の完コピはもちろん、個々に合った運指やフレーズもお教えします。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q7. 機材の集め方や、録音(ライン録り)の仕方も教えてもらえますか？</button>
+      <div class="panel">A. はい、可能です。「いい音」の出し方や、SNSに自分の弾いてみた動画を載せたい方にも、環境や設備のアドバイスをさせていただきます。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q8. レッスンをお休みした場合、振替レッスンはありますか？</button>
+      <div class="panel">A. はい、可能です。都合により欠席された場合は、別日に振替レッスンを行います。</div>
+    </div>
+    <div class="accordion-item">
+      <button>Q9. 料金について教えてください。</button>
+      <div class="panel">A. 入会金は通常レッスン①の1か月分です。お月謝は毎月10日に翌月分をクレジットカード、PayPay、または銀行振込でお支払いいただきます。</div>
+    </div>
   </div>
 </section>
 
@@ -256,11 +295,10 @@ h2 { color: #222; border-bottom: 2px solid #f39c12; padding-bottom: 5px; text-al
 </section>
 
 <script>
-const accItems = document.querySelectorAll('.accordion-item button');
-accItems.forEach(btn => {
+document.querySelectorAll('.accordion-item button').forEach(btn => {
   btn.addEventListener('click', () => {
     const panel = btn.nextElementSibling;
-    panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    panel.style.display = (panel.style.display === "block") ? "none" : "block";
   });
 });
 </script>
